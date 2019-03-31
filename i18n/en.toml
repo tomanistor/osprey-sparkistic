@@ -20,7 +20,7 @@ other = "Send"
 other = "Thanks for your email!"
 [minuteRead]
 one = "One minute read"
-other = "{{.Count}} minutes read"
+other = "{{.Count}} minute read"
 [latestPosts]
 other = "Latest Posts"
 [enableJavaScript]

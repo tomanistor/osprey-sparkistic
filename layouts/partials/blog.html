@@ -12,6 +12,18 @@
               {{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }} · {{ i18n "minuteRead" .ReadingTime }}
             </div>
           </article>
+          <div class="tags-container">
+            <h3 class="tags-title">Tags</h3>
+            {{ $taxo := "tags" }}
+            <ul class="{{ $taxo }}">
+              {{ range .Param $taxo }}
+                {{ $name := . }}
+                {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                  <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+                {{ end }}
+              {{ end }}
+            </ul>
+          </div>
         {{ end }}
       </div>
     </div>
