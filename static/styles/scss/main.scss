@@ -115,7 +115,7 @@ main {
 }
 
 .container {
-  max-width: 43.75rem; // 700px
+  max-width: 53.75rem;
   margin: auto;
   padding: $vertical-rhythm * 4 0 $vertical-rhythm * 4;
 }
@@ -213,6 +213,45 @@ time {
   h3 {
     margin: 0 0 $vertical-rhythm * 2;
     font-family: $font-body;
+  }
+}
+
+.tags-container {
+  .tags-title {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 90%;
+      left: 50%;
+      bottom: -3px;
+      transform: translateX(-50%);
+      background-color: $teal;
+    }
+  }
+
+  .tags {
+    li {
+      display: inline-block;
+      list-style-type: none;
+      margin-left: 0;
+      margin-right: 5px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border: 1px solid $smoke;
+      border-radius: 10px;
+    }
+
+    a {
+      padding: .5rem;
+      color: $teal;
+    }
   }
 }
 

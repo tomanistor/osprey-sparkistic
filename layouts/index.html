@@ -14,8 +14,8 @@
       {{ end }}
 
       <!-- Blog -->
-      {{ if not (eq (len (where .Data.Pages "Section" "blog")) 0) }}
-        {{ partial "blog.html" . }}
+      {{ if not (eq (len (where .Data.Pages "Section" "support")) 0) }}
+        {{ partial "support.html" . }}
       {{ end }}
 
       <!-- Contact -->

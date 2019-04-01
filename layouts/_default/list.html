@@ -5,7 +5,7 @@
     {{ partial "body-top" . }}
     <main>
 
-      <section class="blog" id="blog">
+      <section class="blog" id="support">
         <div class="container">
           <div class="row center-xs">
             <div class="col-xs-12"><h1>{{ humanize .Type }}</h1></div>
@@ -13,10 +13,24 @@
           <div class="row">
             <div class="col-xs-12 posts-list">
               {{ range .Data.Pages }}
-                <article>
-                  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                  <div class=sub-header>
-                    {{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }} · {{ i18n "minuteRead" .ReadingTime }}
+                <article class="row">
+                  <div class="col-xs-12 col-sm-8 post-info">
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <div class=sub-header>
+                      {{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }} · {{ i18n "minuteRead" .ReadingTime }}
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 tags-container">
+                    <h3 class="tags-title">Tags</h3>
+                    {{ $taxo := "tags" }}
+                    <ul class="{{ $taxo }}">
+                      {{ range .Param $taxo }}
+                        {{ $name := . }}
+                        {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                          <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+                        {{ end }}
+                      {{ end }}
+                    </ul>
                   </div>
                 </article>
               {{ end }}
