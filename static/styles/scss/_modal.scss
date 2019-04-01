@@ -59,6 +59,11 @@
   max-height: calc(80vh - 20vh);
   padding: 30px;
   overflow-y: auto;
+
+  img {
+    max-width: 175px;
+    max-height: 90px;
+  }
 }
 
 .close {
