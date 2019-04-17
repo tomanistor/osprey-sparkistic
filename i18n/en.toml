@@ -39,3 +39,7 @@ other = "GitHub"
 other = "LinkedIn"
 [twitter]
 other = "Twitter"
+[categories]
+other = "Categories"
+[tags]
+other = "Tags"
