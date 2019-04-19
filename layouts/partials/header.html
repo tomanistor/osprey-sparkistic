@@ -43,6 +43,10 @@
     <meta name="description" content="{{ .Summary }}">
   {{ end }}
 
+  {{ if .Site.Params.keywords }}
+  <meta name="keywords" content="{{ .Site.Params.keywords }}">
+  {{ end }}
+
   {{ if .Site.Params.author }}
     <meta name="author" content="{{ .Site.Params.author }}">
   {{ end }}
