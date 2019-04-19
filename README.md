@@ -1,4 +1,4 @@
-![Logo](https://github.com/tomanistor/osprey/blob/master/images/osprey-logo.png)
+![Logo](https://github.com/tomanistor/osprey-sparkistic/blob/master/images/osprey-logo.png)
 
 # Osprey
 Osprey is a simple, clean, and fast one-page [Hugo](https://gohugo.io/) portfolio accompanied by a blog.
@@ -20,7 +20,7 @@ Osprey is a simple, clean, and fast one-page [Hugo](https://gohugo.io/) portfoli
 * Custom CSS option
 
 ## Screenshot
-![Screenshot](https://github.com/tomanistor/osprey/blob/master/images/tn.png)
+![Screenshot](https://github.com/tomanistor/osprey-sparkistic/blob/master/images/tn.png)
 
 ## Installation
 ### Option 1: Clone Repository
@@ -28,14 +28,14 @@ In the root of your Hugo site directory run:
 
 ```console
 $ cd themes
-$ git clone https://github.com/tomanistor/osprey.git
+$ git clone https://github.com/tomanistor/osprey-sparkistic.git
 ```
 
 ### Option 2: Create Submodule
 Create a submodule linked directly to the theme's GitHub repository in order to receive updates:
 
 ```console
-$ git submodule add https://github.com/tomanistor/osprey.git themes/osprey
+$ git submodule add https://github.com/tomanistor/osprey-sparkistic.git themes/osprey-sparkistic
 ```
 
 Then run:
@@ -53,11 +53,11 @@ baseURL = "https://tomanistor.com"
 tags = ["portfolio", "web design", "blog"]
 languageCode = "en-US"
 config = "config.toml"
-theme = "osprey"
+theme = "osprey-sparkistic"
 canonifyURLS = true
 googleAnalytics = ""
-disqusShortname = "tomanistor"
-disableKinds = ["taxonomy", "taxonomyTerm"] # This theme does not currently use "tag" and "category" taxonomies
+disqusShortname = ""
+# disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [Params]
   tagline = "Osprey Example Site"
@@ -165,7 +165,7 @@ The email address specified in the config.toml file will be the one receiving me
 #### Basin
 Basin is an alternative, free AJAX contact form service. To use Basin, [sign up for a free account](https://usebasin.com/users/sign_up) and create a form. Copy and paste your form's URL endpoint to the `ajaxBasin` config.toml parameter. Select the `Submit this form via AJAX` option on your Basin dashboard.
 
-![Basin AJAX setup](https://github.com/tomanistor/osprey/blob/master/images/basin-ajax-setup.png)
+![Basin AJAX setup](https://github.com/tomanistor/osprey-sparkistic/blob/master/images/basin-ajax-setup.png)
 
 ### Custom CSS
 To implement custom CSS sitewide, change the config.toml parameter `customCSS` from `false` to `true` and then create a `css.html` file in your `layouts/partials/` folder like the example below:
@@ -188,4 +188,4 @@ To implement cache busting of CSS and JS static assets with something like Gulp.
 If you'd like to help with the development of this theme, I encourage you to submit a pull request or create an issue if you find a bug. All help is appreciated.
 
 ## License
-This theme is released under the Apache 2.0 license. For more information read the [license](https://github.com/tomanistor/osprey/blob/master/LICENSE).
+This theme is released under the Apache 2.0 license. For more information read the [license](https://github.com/tomanistor/osprey-sparkistic/blob/master/LICENSE).

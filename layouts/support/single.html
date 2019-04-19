@@ -13,16 +13,30 @@
             {{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }} · {{ i18n "minuteRead" .ReadingTime }}
           </div>
 
-          <div class="tags-container">
-            {{ $taxo := "tags" }}
-            <ul class="{{ $taxo }}">
-              {{ range .Param $taxo }}
+          <div class="taxonomy-container">
+            <div class="categories-container">
+              <h3 class="categories-title">{{ i18n "categories" }}</h3>
+              <ul class="categories">
+                {{ range .Param "categories" }}
                 {{ $name := . }}
-                {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
-                  <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+                {{ with $.Site.GetPage (printf "/%s/%s" "categories" ($name | urlize)) }}
+                <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
                 {{ end }}
-              {{ end }}
-            </ul>
+                {{ end }}
+              </ul>
+            </div>
+
+            <div class="tags-container">
+              <h3 class="tags-title">{{ i18n "tags" }}</h3>
+              <ul class="tags">
+                {{ range .Param "tags" }}
+                {{ $name := . }}
+                {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
+                <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+                {{ end }}
+                {{ end }}
+              </ul>
+            </div>
           </div>
 
           <article class="entry-content">

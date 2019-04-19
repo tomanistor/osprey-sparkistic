@@ -216,10 +216,11 @@ time {
   }
 }
 
+.categories-container,
 .tags-container {
+  .categories-title,
   .tags-title {
     display: inline-block;
-    margin-bottom: 1rem;
     font-size: 1.1rem;
     text-transform: uppercase;
     position: relative;
@@ -236,20 +237,81 @@ time {
     }
   }
 
-  .tags {
-    li {
-      display: inline-block;
-      list-style-type: none;
-      margin-left: 0;
-      font-size: 1rem;
-      text-transform: uppercase;
-      border: 1px solid $smoke;
-      border-radius: 10px;
-    }
+  .categories-title {
+    margin-bottom: 0;
+  }
 
-    a {
-      padding: .5rem;
-      color: $teal;
+  .tags-title {
+    margin-bottom: 1rem;
+  }
+}
+
+.categories-container {
+  margin-bottom: 4rem;
+}
+
+.categories,
+.tags {
+  display: inline-block;
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: .3rem 0;
+  }
+
+  a {
+    border: 1px solid $smoke;
+    border-radius: 10px;
+    padding: .3rem .5rem;
+    text-decoration: none;
+    background: none;
+    text-shadow: none;
+    transition: all .3s;
+  }
+}
+
+.categories {
+  margin-bottom: 0;
+
+  a {
+    background-color: $storm;
+    color: $white;
+
+    &:focus,
+    &:hover {
+      background-color: $accent;
+    }
+  }
+}
+
+.taxonomy-container {
+  margin-bottom: 1rem;
+
+  .categories-container {
+    margin-bottom: 0;
+  }
+
+  .categories-title,
+  .tags-title {
+    margin: 0;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.tags {
+  a {
+    color: $teal;
+
+    &:focus,
+    &:hover {
+      color: $accent;
     }
   }
 }
