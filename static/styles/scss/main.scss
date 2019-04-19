@@ -252,15 +252,13 @@ time {
 
 .categories,
 .tags {
-  display: inline-block;
-
   li {
     display: inline-block;
     list-style-type: none;
     margin-left: 0;
     font-size: 1rem;
     text-transform: uppercase;
-    padding: .3rem 0;
+    padding: .3rem;
   }
 
   a {
@@ -288,6 +286,18 @@ time {
   }
 }
 
+.tags {
+  a {
+    color: $teal;
+
+    &:focus,
+    &:hover {
+      color: $accent;
+      background-color: $smoke;
+    }
+  }
+}
+
 .taxonomy-container {
   margin-bottom: 1rem;
 
@@ -303,16 +313,10 @@ time {
       content: none;
     }
   }
-}
 
-.tags {
-  a {
-    color: $teal;
-
-    &:focus,
-    &:hover {
-      color: $accent;
-    }
+  .categories,
+  .tags {
+    display: inline-block;
   }
 }
 
