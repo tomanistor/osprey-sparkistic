@@ -1,11 +1,11 @@
-<section class="blog" id="support">
+<section class="blog" id="blog">
   <div class="container">
     <div class="row center-xs">
       <div class="col-xs-12"><h1>{{ i18n "latestPosts" }}</h1></div>
       <div class="col-xs-12 categories-container">
         {{ $taxo := "categories" }}
         <ul class="{{ $taxo }}">
-          {{ range first 5 (where .Data.Pages "Section" "support") }}
+          {{ range first 5 (where .Data.Pages "Section" "blog") }}
             {{ range .Param $taxo }}
               {{ $name := . }}
               {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
@@ -18,7 +18,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12 posts-list">
-        {{ range first 5 (where .Data.Pages "Section" "support") }}
+        {{ range first 5 (where .Data.Pages "Section" "blog") }}
           <article class="row">
             <div class="col-xs-12 col-sm-8 post-info">
               <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="row center-xs">
-      <div class="col-xs-12"><h3><a href="{{ "support/" | relLangURL }}">{{ i18n "viewAll" }}</a></h3></div>
+      <div class="col-xs-12"><h3><a href="{{ "blog/" | relLangURL }}">{{ i18n "viewAll" }}</a></h3></div>
     </div>
   </div>
 </section>
