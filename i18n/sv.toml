@@ -30,3 +30,7 @@ other = "Vad hände?"
 other = "Temat utvecklat av"
 [copyright]
 other = "upphovsrätt"
+[categories]
+other = "Kategorier"
+[tags]
+other = "Taggar"

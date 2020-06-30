@@ -39,6 +39,8 @@ other = "GitHub"
 other = "LinkedIn"
 [twitter]
 other = "Twitter"
+[youtube]
+other = "Youtube"
 [categories]
 other = "Categories"
 [tags]
