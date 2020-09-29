@@ -5,7 +5,7 @@
       <div class="col-xs-12 categories-container">
         {{ $taxo := "categories" }}
         <ul class="{{ $taxo }}">
-          {{ range first 5 (where .Data.Pages "Section" "blog") }}
+          {{ range first 5 (where site.RegularPages "Section" "blog") }}
             {{ range .Param $taxo }}
               {{ $name := . }}
               {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
@@ -18,7 +18,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12 posts-list">
-        {{ range first 5 (where .Data.Pages "Section" "blog") }}
+        {{ range first 5 (where site.RegularPages "Section" "blog") }}
           <article class="row">
             <div class="col-xs-12 col-sm-8 post-info">
               <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
