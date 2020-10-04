@@ -18,11 +18,16 @@
           </article>
 
           <div class="pagination">
-            {{ if .PrevInSection }}
-              <a href="{{ .PrevInSection.Permalink }}">&laquo; {{ .PrevInSection.Title }}</a>
+            {{ with .PrevInSection }}
+              {{ if (ne .Title "About") }}
+                <a href="{{ .Permalink }}">&laquo; {{ .Title }}</a>
+              {{ end }}
             {{ end }}
-            {{ if .NextInSection }}
-              <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }} &raquo;</a>
+            
+            {{ with .NextInSection }}
+              {{ if (ne .Title "About") }}
+                <a href="{{ .Permalink }}">{{ .Title }} &raquo;</a>
+              {{ end }}
             {{ end }}
           </div>
         </section>
