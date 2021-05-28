@@ -7,6 +7,7 @@ tags = ["blog", "portfolio", "gallery", "minimalist", "responsive", "flexbox"]
 features = ["blog", "portfolio", "google analytics"]
 min_version = "0.75.1"
 
+
 [author]
   name = "Toma Nistor"
   homepage = "https://tomanistor.com"
